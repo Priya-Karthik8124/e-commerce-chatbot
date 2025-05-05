@@ -1,0 +1,988 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "forceNER": true,
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "ani,discount,do,have,you": {
+            "intent": "discount.inquiry",
+            "domain": "default"
+          },
+          "ani,avail,offer": {
+            "intent": "discount.inquiry",
+            "domain": "default"
+          },
+          "are,deal,today’,what": {
+            "intent": "discount.inquiry",
+            "domain": "default"
+          },
+          "cheapest,item,me,show,the": {
+            "intent": "price.lowest",
+            "domain": "default"
+          },
+          "cheapest,is,product,the,which": {
+            "intent": "price.lowest",
+            "domain": "default"
+          },
+          "compar,price": {
+            "intent": "price.lowest",
+            "domain": "default"
+          },
+          "is,of,out,stock,what": {
+            "intent": "stock.status",
+            "domain": "default"
+          },
+          "item,of,out,show,stock": {
+            "intent": "stock.status",
+            "domain": "default"
+          },
+          "out,product,sold": {
+            "intent": "stock.status",
+            "domain": "default"
+          },
+          "hi": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          },
+          "hello,there": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          },
+          "hey": {
+            "intent": "greetings.hello",
+            "domain": "default"
+          },
+          "electron,me,show": {
+            "intent": "category.electronics",
+            "domain": "default"
+          },
+          "electron,item,list": {
+            "intent": "category.electronics",
+            "domain": "default"
+          },
+          "do,electron,have,what,you": {
+            "intent": "category.electronics",
+            "domain": "default"
+          },
+          "footwear,me,show": {
+            "intent": "category.footwear",
+            "domain": "default"
+          },
+          "do,have,shoe,what,you": {
+            "intent": "category.footwear",
+            "domain": "default"
+          },
+          "footwear,item,pleas": {
+            "intent": "category.footwear",
+            "domain": "default"
+          },
+          "cloth,me,show": {
+            "intent": "category.clothes",
+            "domain": "default"
+          },
+          "ani,cloth,do,have,you": {
+            "intent": "category.clothes",
+            "domain": "default"
+          },
+          "cloth,item,list": {
+            "intent": "category.clothes",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "discount.inquiry": "default",
+          "price.lowest": "default",
+          "stock.status": "default",
+          "greetings.hello": "default",
+          "category.electronics": "default",
+          "category.footwear": "default",
+          "category.clothes": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "Do you have any discounts?",
+            "intent": "discount.inquiry"
+          },
+          {
+            "domain": "default",
+            "utterance": "Any offers available?",
+            "intent": "discount.inquiry"
+          },
+          {
+            "domain": "default",
+            "utterance": "What are today’s deals?",
+            "intent": "discount.inquiry"
+          },
+          {
+            "domain": "default",
+            "utterance": "Show me the cheapest item",
+            "intent": "price.lowest"
+          },
+          {
+            "domain": "default",
+            "utterance": "Which product is the cheapest?",
+            "intent": "price.lowest"
+          },
+          {
+            "domain": "default",
+            "utterance": "Compare prices",
+            "intent": "price.lowest"
+          },
+          {
+            "domain": "default",
+            "utterance": "What is out of stock?",
+            "intent": "stock.status"
+          },
+          {
+            "domain": "default",
+            "utterance": "Show out of stock items",
+            "intent": "stock.status"
+          },
+          {
+            "domain": "default",
+            "utterance": "Sold out products",
+            "intent": "stock.status"
+          },
+          {
+            "domain": "default",
+            "utterance": "Hi",
+            "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "Hello there",
+            "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "Hey",
+            "intent": "greetings.hello"
+          },
+          {
+            "domain": "default",
+            "utterance": "Show me electronics",
+            "intent": "category.electronics"
+          },
+          {
+            "domain": "default",
+            "utterance": "List electronics items",
+            "intent": "category.electronics"
+          },
+          {
+            "domain": "default",
+            "utterance": "What electronics do you have",
+            "intent": "category.electronics"
+          },
+          {
+            "domain": "default",
+            "utterance": "Show me footwear",
+            "intent": "category.footwear"
+          },
+          {
+            "domain": "default",
+            "utterance": "What shoes do you have",
+            "intent": "category.footwear"
+          },
+          {
+            "domain": "default",
+            "utterance": "Footwear items please",
+            "intent": "category.footwear"
+          },
+          {
+            "domain": "default",
+            "utterance": "Show me clothes",
+            "intent": "category.clothes"
+          },
+          {
+            "domain": "default",
+            "utterance": "Do you have any clothes?",
+            "intent": "category.clothes"
+          },
+          {
+            "domain": "default",
+            "utterance": "List clothing items",
+            "intent": "category.clothes"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "do": 1,
+              "you": 1,
+              "have": 1,
+              "ani": 1,
+              "discount": 1,
+              "offer": 1,
+              "avail": 1,
+              "what": 1,
+              "are": 1,
+              "today’": 1,
+              "deal": 1,
+              "show": 1,
+              "me": 1,
+              "the": 1,
+              "cheapest": 1,
+              "item": 1,
+              "which": 1,
+              "product": 1,
+              "is": 1,
+              "compar": 1,
+              "price": 1,
+              "out": 1,
+              "of": 1,
+              "stock": 1,
+              "sold": 1,
+              "hi": 1,
+              "hello": 1,
+              "there": 1,
+              "hey": 1,
+              "electron": 1,
+              "list": 1,
+              "footwear": 1,
+              "shoe": 1,
+              "pleas": 1,
+              "cloth": 1
+            },
+            "intents": {
+              "discount.inquiry": 1,
+              "price.lowest": 1,
+              "stock.status": 1,
+              "greetings.hello": 1,
+              "category.electronics": 1,
+              "category.footwear": 1,
+              "category.clothes": 1
+            },
+            "intentFeatures": {
+              "discount.inquiry": {
+                "do": 1,
+                "you": 1,
+                "have": 1,
+                "ani": 1,
+                "discount": 1,
+                "offer": 1,
+                "avail": 1,
+                "what": 1,
+                "are": 1,
+                "today’": 1,
+                "deal": 1
+              },
+              "price.lowest": {
+                "show": 1,
+                "me": 1,
+                "the": 1,
+                "cheapest": 1,
+                "item": 1,
+                "which": 1,
+                "product": 1,
+                "is": 1,
+                "compar": 1,
+                "price": 1
+              },
+              "stock.status": {
+                "what": 1,
+                "is": 1,
+                "out": 1,
+                "of": 1,
+                "stock": 1,
+                "show": 1,
+                "item": 1,
+                "sold": 1,
+                "product": 1
+              },
+              "greetings.hello": {
+                "hi": 1,
+                "hello": 1,
+                "there": 1,
+                "hey": 1
+              },
+              "category.electronics": {
+                "show": 1,
+                "me": 1,
+                "electron": 1,
+                "list": 1,
+                "item": 1,
+                "what": 1,
+                "do": 1,
+                "you": 1,
+                "have": 1
+              },
+              "category.footwear": {
+                "show": 1,
+                "me": 1,
+                "footwear": 1,
+                "what": 1,
+                "shoe": 1,
+                "do": 1,
+                "you": 1,
+                "have": 1,
+                "item": 1,
+                "pleas": 1
+              },
+              "category.clothes": {
+                "show": 1,
+                "me": 1,
+                "cloth": 1,
+                "do": 1,
+                "you": 1,
+                "have": 1,
+                "ani": 1,
+                "list": 1,
+                "item": 1
+              }
+            },
+            "featuresToIntent": {
+              "do": [
+                "discount.inquiry",
+                "category.electronics",
+                "category.footwear",
+                "category.clothes"
+              ],
+              "you": [
+                "discount.inquiry",
+                "category.electronics",
+                "category.footwear",
+                "category.clothes"
+              ],
+              "have": [
+                "discount.inquiry",
+                "category.electronics",
+                "category.footwear",
+                "category.clothes"
+              ],
+              "ani": [
+                "discount.inquiry",
+                "category.clothes"
+              ],
+              "discount": [
+                "discount.inquiry"
+              ],
+              "offer": [
+                "discount.inquiry"
+              ],
+              "avail": [
+                "discount.inquiry"
+              ],
+              "what": [
+                "discount.inquiry",
+                "stock.status",
+                "category.electronics",
+                "category.footwear"
+              ],
+              "are": [
+                "discount.inquiry"
+              ],
+              "today’": [
+                "discount.inquiry"
+              ],
+              "deal": [
+                "discount.inquiry"
+              ],
+              "show": [
+                "price.lowest",
+                "stock.status",
+                "category.electronics",
+                "category.footwear",
+                "category.clothes"
+              ],
+              "me": [
+                "price.lowest",
+                "category.electronics",
+                "category.footwear",
+                "category.clothes"
+              ],
+              "the": [
+                "price.lowest"
+              ],
+              "cheapest": [
+                "price.lowest"
+              ],
+              "item": [
+                "price.lowest",
+                "stock.status",
+                "category.electronics",
+                "category.footwear",
+                "category.clothes"
+              ],
+              "which": [
+                "price.lowest"
+              ],
+              "product": [
+                "price.lowest",
+                "stock.status"
+              ],
+              "is": [
+                "price.lowest",
+                "stock.status"
+              ],
+              "compar": [
+                "price.lowest"
+              ],
+              "price": [
+                "price.lowest"
+              ],
+              "out": [
+                "stock.status"
+              ],
+              "of": [
+                "stock.status"
+              ],
+              "stock": [
+                "stock.status"
+              ],
+              "sold": [
+                "stock.status"
+              ],
+              "hi": [
+                "greetings.hello"
+              ],
+              "hello": [
+                "greetings.hello"
+              ],
+              "there": [
+                "greetings.hello"
+              ],
+              "hey": [
+                "greetings.hello"
+              ],
+              "electron": [
+                "category.electronics"
+              ],
+              "list": [
+                "category.electronics",
+                "category.clothes"
+              ],
+              "footwear": [
+                "category.footwear"
+              ],
+              "shoe": [
+                "category.footwear"
+              ],
+              "pleas": [
+                "category.footwear"
+              ],
+              "cloth": [
+                "category.clothes"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "do",
+                "you",
+                "have",
+                "ani",
+                "discount",
+                "offer",
+                "avail",
+                "what",
+                "are",
+                "today’",
+                "deal",
+                "show",
+                "me",
+                "the",
+                "cheapest",
+                "item",
+                "which",
+                "product",
+                "is",
+                "compar",
+                "price",
+                "out",
+                "of",
+                "stock",
+                "sold",
+                "hi",
+                "hello",
+                "there",
+                "hey",
+                "electron",
+                "list",
+                "footwear",
+                "shoe",
+                "pleas",
+                "cloth"
+              ],
+              "intents": [
+                "discount.inquiry",
+                "price.lowest",
+                "stock.status",
+                "greetings.hello",
+                "category.electronics",
+                "category.footwear",
+                "category.clothes"
+              ],
+              "perceptrons": [
+                [
+                  -0.28766104578971863,
+                  -0.28766104578971863,
+                  -0.28766104578971863,
+                  5.8731584548950195,
+                  7.855453968048096,
+                  3.6739864349365234,
+                  3.6739864349365234,
+                  1.0539100170135498,
+                  4.060969352722168,
+                  4.060969352722168,
+                  4.060969352722168,
+                  -0.5658226013183594,
+                  -0.4860404133796692,
+                  -0.37992364168167114,
+                  -0.37992364168167114,
+                  -0.6695194244384766,
+                  -0.1749054342508316,
+                  -0.4652245342731476,
+                  -0.7059264183044434,
+                  -0.6442132592201233,
+                  -0.6442132592201233,
+                  -0.8447597622871399,
+                  -0.556571900844574,
+                  -0.556571900844574,
+                  -0.23398357629776,
+                  -1.0459654331207275,
+                  -0.6129844188690186,
+                  -0.6129844188690186,
+                  -1.0369502305984497,
+                  -1.3992561101913452,
+                  -0.15599189698696136,
+                  -0.36672818660736084,
+                  -1.339843511581421,
+                  -0.2230881303548813,
+                  -5.7292160987854,
+                  1.0296860118155506
+                ],
+                [
+                  -0.23918120563030243,
+                  -0.23918120563030243,
+                  -0.23918120563030243,
+                  -0.425823450088501,
+                  -0.04575040191411972,
+                  -0.3069553077220917,
+                  -0.3069553077220917,
+                  -0.7157257199287415,
+                  -0.11028724908828735,
+                  -0.11028724908828735,
+                  -0.11028724908828735,
+                  0.2510078549385071,
+                  0.5763971209526062,
+                  5.320779323577881,
+                  5.320779323577881,
+                  1.8019874095916748,
+                  1.3249647617340088,
+                  0.5232205390930176,
+                  0.8560602068901062,
+                  6.651506423950195,
+                  6.651506423950195,
+                  -1.550514578819275,
+                  -0.7562631368637085,
+                  -0.7562631368637085,
+                  -0.7494899034500122,
+                  -0.9667999744415283,
+                  -0.5575072169303894,
+                  -0.5575072169303894,
+                  -0.9584403038024902,
+                  -1.7719489336013794,
+                  -1.0176855325698853,
+                  -1.8882852792739868,
+                  -0.04620586335659027,
+                  -0.8502156734466553,
+                  -1.7520042657852173,
+                  0.9566907707267882
+                ],
+                [
+                  -0.39661988615989685,
+                  -0.39661988615989685,
+                  -0.39661988615989685,
+                  -0.23484626412391663,
+                  -0.014867382124066353,
+                  -0.18420477211475372,
+                  -0.18420477211475372,
+                  0.5154106616973877,
+                  -0.37784701585769653,
+                  -0.37784701585769653,
+                  -0.37784701585769653,
+                  0.5354261994361877,
+                  -1.1213676929473877,
+                  -1.3432714939117432,
+                  -1.3432714939117432,
+                  0.2781738042831421,
+                  -1.021933674812317,
+                  2.905705690383911,
+                  0.2945398986339569,
+                  -0.2581210434436798,
+                  -0.2581210434436798,
+                  6.940014839172363,
+                  3.012272357940674,
+                  3.012272357940674,
+                  3.9275434017181396,
+                  -0.5071629881858826,
+                  -0.29189127683639526,
+                  -0.29189127683639526,
+                  -0.503381609916687,
+                  -0.7694106101989746,
+                  -0.6469399929046631,
+                  -0.7059168815612793,
+                  -0.20082828402519226,
+                  -0.40889766812324524,
+                  -0.5560736060142517,
+                  0.5091400277663684
+                ],
+                [
+                  -0.9460275769233704,
+                  -0.9460275769233704,
+                  -0.9460275769233704,
+                  -1.9546465873718262,
+                  -0.2820310890674591,
+                  -1.5325618982315063,
+                  -1.5325618982315063,
+                  -1.8675570487976074,
+                  -1.0556095838546753,
+                  -1.0556095838546753,
+                  -1.0556095838546753,
+                  -1.831985592842102,
+                  -1.807423710823059,
+                  -0.6997312903404236,
+                  -0.6997312903404236,
+                  -2.3806991577148438,
+                  -0.6734793186187744,
+                  -2.016059160232544,
+                  -0.9593024253845215,
+                  -2.4764039516448975,
+                  -2.4764039516448975,
+                  -1.65041184425354,
+                  -0.30834394693374634,
+                  -0.30834394693374634,
+                  -1.340026617050171,
+                  8.95560073852539,
+                  4.65543270111084,
+                  4.65543270111084,
+                  8.957724571228027,
+                  -1.4207954406738281,
+                  -1.266401767730713,
+                  -1.5973711013793945,
+                  -0.351467490196228,
+                  -1.0610318183898926,
+                  -1.40292227268219,
+                  5.059421190354218
+                ],
+                [
+                  0.38161957263946533,
+                  0.38161957263946533,
+                  0.38161957263946533,
+                  -1.147431492805481,
+                  -0.6190218925476074,
+                  -0.023113731294870377,
+                  -0.023113731294870377,
+                  0.8182950615882874,
+                  -0.463283896446228,
+                  -0.463283896446228,
+                  -0.463283896446228,
+                  0.7771221995353699,
+                  1.1111156940460205,
+                  -1.204050898551941,
+                  -1.204050898551941,
+                  0.027935922145843506,
+                  -0.024296196177601814,
+                  -0.060044847428798676,
+                  -0.19473610818386078,
+                  -0.23120494186878204,
+                  -0.23120494186878204,
+                  -0.5535389184951782,
+                  -0.515816330909729,
+                  -0.515816330909729,
+                  -0.026563845574855804,
+                  -0.3686319589614868,
+                  -0.2180345207452774,
+                  -0.2180345207452774,
+                  -0.36318716406822205,
+                  11.937969207763672,
+                  2.011800527572632,
+                  -2.164613962173462,
+                  -2.2948243618011475,
+                  -0.42699089646339417,
+                  -2.6189489364624023,
+                  0.3525553069033751
+                ],
+                [
+                  1.053123116493225,
+                  1.053123116493225,
+                  1.053123116493225,
+                  -2.4169669151306152,
+                  -1.4930989742279053,
+                  -0.046178750693798065,
+                  -0.046178750693798065,
+                  2.0567774772644043,
+                  -0.9603996872901917,
+                  -0.9603996872901917,
+                  -0.9603996872901917,
+                  1.3149676322937012,
+                  1.8382734060287476,
+                  -2.057748794555664,
+                  -2.057748794555664,
+                  0.22412288188934326,
+                  -0.0457664355635643,
+                  -0.11619188636541367,
+                  -0.40820369124412537,
+                  -0.422173410654068,
+                  -0.422173410654068,
+                  -0.94550621509552,
+                  -0.8802886009216309,
+                  -0.8802886009216309,
+                  -0.05038775876164436,
+                  -0.6924609541893005,
+                  -0.40542134642601013,
+                  -0.40542134642601013,
+                  -0.6828843355178833,
+                  -5.513065814971924,
+                  -0.5955035090446472,
+                  10.132328033447266,
+                  8.085538864135742,
+                  3.362229347229004,
+                  -3.562891960144043,
+                  0.6652569163304417
+                ],
+                [
+                  0.4167655408382416,
+                  0.4167655408382416,
+                  0.4167655408382416,
+                  0.7794605493545532,
+                  -2.395174980163574,
+                  -0.6732355952262878,
+                  -0.6732355952262878,
+                  -1.23770010471344,
+                  -0.08858980238437653,
+                  -0.08858980238437653,
+                  -0.08858980238437653,
+                  0.6716646552085876,
+                  1.1866570711135864,
+                  -1.2279276847839355,
+                  -1.2279276847839355,
+                  0.07254301011562347,
+                  -0.05908092111349106,
+                  -0.16122795641422272,
+                  -0.13023948669433594,
+                  -0.2555719316005707,
+                  -0.2555719316005707,
+                  -0.6489417552947998,
+                  -0.545229434967041,
+                  -0.545229434967041,
+                  -0.07574453204870224,
+                  -0.3514707088470459,
+                  -0.23253704607486725,
+                  -0.23253704607486725,
+                  -0.33989253640174866,
+                  -2.465456485748291,
+                  1.9858753681182861,
+                  -1.9892187118530273,
+                  -0.6011605858802795,
+                  -0.2039875090122223,
+                  11.992546081542969,
+                  0.27643547383429856
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "Do you have any discounts?"
+      ],
+      [
+        "en",
+        "Any offers available?"
+      ],
+      [
+        "en",
+        "What are today’s deals?"
+      ],
+      [
+        "en",
+        "Show me the cheapest item"
+      ],
+      [
+        "en",
+        "Which product is the cheapest?"
+      ],
+      [
+        "en",
+        "Compare prices"
+      ],
+      [
+        "en",
+        "What is out of stock?"
+      ],
+      [
+        "en",
+        "Show out of stock items"
+      ],
+      [
+        "en",
+        "Sold out products"
+      ],
+      [
+        "en",
+        "Hi"
+      ],
+      [
+        "en",
+        "Hello there"
+      ],
+      [
+        "en",
+        "Hey"
+      ],
+      [
+        "en",
+        "Show me electronics"
+      ],
+      [
+        "en",
+        "List electronics items"
+      ],
+      [
+        "en",
+        "What electronics do you have"
+      ],
+      [
+        "en",
+        "Show me footwear"
+      ],
+      [
+        "en",
+        "What shoes do you have"
+      ],
+      [
+        "en",
+        "Footwear items please"
+      ],
+      [
+        "en",
+        "Show me clothes"
+      ],
+      [
+        "en",
+        "Do you have any clothes?"
+      ],
+      [
+        "en",
+        "List clothing items"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {
+      "en": {
+        "discount.inquiry": [
+          {
+            "answer": "Sure! We have some great discounts. Would you like to see them?"
+          }
+        ],
+        "price.lowest": [
+          {
+            "answer": "Let me show you our cheapest product. Would you like to see it?"
+          }
+        ],
+        "stock.status": [
+          {
+            "answer": "I can show you the out-of-stock products. Want to see them?"
+          }
+        ],
+        "greetings.hello": [
+          {
+            "answer": "Hello! How can I assist you today?"
+          }
+        ],
+        "category.electronics": [
+          {
+            "answer": "Sure! I’ll list products from the electronics category."
+          }
+        ],
+        "category.footwear": [
+          {
+            "answer": "Sure! Here are some footwear options."
+          }
+        ],
+        "category.clothes": [
+          {
+            "answer": "Here are some clothing items you might like."
+          }
+        ]
+      }
+    }
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}
